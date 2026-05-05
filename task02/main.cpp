@@ -1,22 +1,22 @@
-#include"util.h"
+#include "util.h"
+
 int main() {
 	int size;
 
-	cout << "input size of matri: ";
+	cout << "Input size of matrix: ";
 	cin >> size;
 
 	int** matrix = create(size);
-	if (matrix == NULL) {
+
+	if (matrix == NULL )
+	{
 		return -1;
 	}
 
 	init_user(matrix, size);
 
-	print("matrix:\n");
+	print("Matris:\n");
 	print(convert(matrix, size));
 
-	remove(matrix, size);
-
 	return 0;
-
 }
